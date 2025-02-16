@@ -17,9 +17,11 @@ if __name__ == "__main__":
         env_name,
         robots=["Panda"],
         controller_configs=suite.load_controller_config(default_controller="JOINT_VELOCITY"),
-        has_renderer=False,
+        has_renderer=True,
         use_camera_obs=False,
         horizon=300,
+        render_camera="frontview",
+        has_offscreen_renderer=True,
         reward_shaping=True,
         control_freq=20,
     )
